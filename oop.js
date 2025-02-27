@@ -127,14 +127,10 @@ class Savings extends Racun{
 }
 
 
-new Racun("Karić Anis");
+
 new Checking("Jeff Bezos",1234567);
-new Savings("Mufid Kokuz",400);
 
 
-let checkingRacun=Racun.getRacun(2);
-let savingsRacun=Racun.getRacun(3);
+let defaultRacun=Racun.getRacun(1);
 
-
-let a = 10;
-export {Racun,Checking,Savings,checkingRacun};
+export {Racun,Checking,Savings,defaultRacun};
