@@ -81,24 +81,29 @@ class Racun {
 
     povrat(kolicina){
         if(kolicina<=0){
-            console.log("Nepravilan unos!");
+            alert("Nepravilan unos!");
             return;
         }
         else if(this.#stanje<kolicina){
-            console.log("Nedovoljno sredstava na računu! : ",this.stanje);
+            console.log('00')
+
+            alert("Nedovoljno sredstava na računu! : " + this.#stanje);
             return;
         }
-        else this.stanje=-kolicina;
+        else {
+            this.#stanje-=kolicina};
+            alert('Uzmite vas novac: ' + kolicina + '\nStanje na racunu: ' + this.#stanje)
     }
     depozit(kolicina){
         if(kolicina<=0){
-            console.log("Nepravilan unos!");
+            alert("Nepravilan unos!");
             return;
         }
+        
+        this.#stanje += kolicina
+        alert('Uplatili ste: ' + kolicina + '\nStanje na racunu: ' + this.#stanje);
 
-        this.stanje+=kolicina;
     }
-
     prikaziInformacije() {
         console.log("------------------------------");
         console.log("Broj Racuna : " + this.broj_racuna);
@@ -127,14 +132,21 @@ class Savings extends Racun{
 }
 
 
-new Racun("Karić Anis");
 new Checking("Jeff Bezos",1234567);
-new Savings("Mufid Kokuz",400);
 
 
-let checkingRacun=Racun.getRacun(2);
-let savingsRacun=Racun.getRacun(3);
 
 
-let a = 10;
-export {Racun,Checking,Savings,checkingRacun};
+
+
+
+let defaultRacun=Racun.getRacun(1);
+
+
+
+export {Racun,Checking,Savings,defaultRacun};
+
+
+
+
+

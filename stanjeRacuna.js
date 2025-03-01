@@ -1,1 +1,1 @@
-import {Racun,Checking,Savings,nekiRacun1} from "./oop.js";
+import {Racun,Checking,Savings,defaultRacun} from "./oop.js";
