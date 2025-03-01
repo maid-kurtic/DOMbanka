@@ -4,7 +4,7 @@ class Racun {
     #ime_vlasnika;
     #stanje;
     static #brojac_racuna = 0;
-    static #racuni=[]; 
+    static #racuni=[];
     #tip_racuna;
 
     constructor(ime_vlasnika, stanje = 0 , tip) {
@@ -102,6 +102,7 @@ class Racun {
         
         this.#stanje += kolicina
         alert('Uplatili ste: ' + kolicina + '\nStanje na racunu: ' + this.#stanje);
+
     }
     prikaziInformacije() {
         console.log("------------------------------");
@@ -144,3 +145,8 @@ let defaultRacun=Racun.getRacun(1);
 
 
 export {Racun,Checking,Savings,defaultRacun};
+
+
+
+
+
